@@ -1,1 +1,415 @@
-テイルズガーデン
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>テイルズガーデン</title>
+  <meta
+    name="description"
+    content="魔法使いたちが暮らす、小さな物語の庭。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 共通ヘッダー -->
+  <div id="header"></div>
+
+
+  <!-- 全画面メニュー -->
+  <nav
+    class="menu-overlay"
+    id="menuOverlay"
+    aria-hidden="true"
+  >
+
+    <div class="menu-inner">
+
+      <div class="menu-heading">
+        <span>INFORMATION</span>
+        <h2>ご案内</h2>
+      </div>
+
+
+      <div class="menu-items">
+
+        <!-- 魔法の庭 -->
+        <a href="#garden" class="menu-item">
+
+          <div class="menu-icon icon-garden">
+            <svg
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <path
+                d="M32 5
+                   L37 24
+                   L56 29
+                   L37 34
+                   L32 53
+                   L27 34
+                   L8 29
+                   L27 24 Z"
+                fill="currentColor"
+              />
+              <circle
+                cx="51"
+                cy="12"
+                r="4"
+                fill="currentColor"
+              />
+              <circle
+                cx="14"
+                cy="49"
+                r="3"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3>魔法の庭</h3>
+            <p>テイルズガーデンの世界や、魔法使いたちが暮らす庭について。</p>
+          </div>
+
+        </a>
+
+
+        <!-- 庭の住人たち -->
+        <a href="#residents" class="menu-item">
+
+          <div class="menu-icon icon-residents">
+            <svg
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <path
+                d="M32 55
+                   C29 52 10 40 10 25
+                   C10 16 17 11 24 11
+                   C28 11 31 13 32 17
+                   C34 13 37 11 41 11
+                   C48 11 54 16 54 25
+                   C54 40 35 52 32 55 Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3>庭の住人たち</h3>
+            <p>この庭で暮らす、個性豊かな魔法使いたちをご紹介します。</p>
+          </div>
+
+        </a>
+
+
+        <!-- 小さな図書室 -->
+        <a href="#library" class="menu-item">
+
+          <div class="menu-icon icon-library">
+            <svg
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <path
+                d="M8 13
+                   C16 10 24 12 32 17
+                   C40 12 48 10 56 13
+                   V51
+                   C48 48 40 50 32 55
+                   C24 50 16 48 8 51 Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M32 17 V54"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3>小さな図書室</h3>
+            <p>魔法使いたちの日々や、小さな物語を読むことができます。</p>
+          </div>
+
+        </a>
+
+
+        <!-- 秘密のクローゼット -->
+        <a href="#closet" class="menu-item">
+
+          <div class="menu-icon icon-closet">
+            <svg
+              viewBox="0 0 64 64"
+              aria-hidden="true"
+            >
+              <path
+                d="M32 56
+                   C28 51 12 42 12 29
+                   C12 20 18 14 25 14
+                   C29 14 32 17 32 21
+                   C32 17 35 14 39 14
+                   C46 14 52 20 52 29
+                   C52 42 36 51 32 56 Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M32 21 C29 27 24 28 20 28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M32 21 C35 27 40 28 44 28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+
+          <div>
+            <h3>秘密のクローゼット</h3>
+            <p>魔法使いたちの衣装や、お気に入りの装いを紹介します。</p>
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <!-- カバー -->
+    <section class="hero">
+
+      <div class="hero-image">
+        <!-- 後ほどお茶会の画像をここに入れます -->
+      </div>
+
+      <div class="hero-text">
+        <p class="hero-subtitle">
+          A little garden of magical stories
+        </p>
+
+        <h1>テイルズガーデン</h1>
+      </div>
+
+    </section>
+
+
+    <!-- 世界観紹介 -->
+    <section class="intro">
+
+      <p>
+        魔法使いたちが暮らす、小さな物語の庭。<br>
+        好きなものや、大切な人との時間を楽しみながら、<br>
+        今日も庭には小さな物語が生まれています。
+      </p>
+
+    </section>
+
+
+    <!-- 4つのコンテンツ -->
+    <section class="contents">
+
+
+      <!-- 魔法の庭 -->
+      <a href="#garden" class="content-card">
+
+        <div class="content-icon icon-garden">
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M32 5
+                 L37 24
+                 L56 29
+                 L37 34
+                 L32 53
+                 L27 34
+                 L8 29
+                 L27 24 Z"
+              fill="currentColor"
+            />
+
+            <circle
+              cx="51"
+              cy="12"
+              r="4"
+              fill="currentColor"
+            />
+
+            <circle
+              cx="14"
+              cy="49"
+              r="3"
+              fill="currentColor"
+            />
+          </svg>
+
+        </div>
+
+        <div class="content-text">
+          <h2>魔法の庭</h2>
+          <p>
+            テイルズガーデンの世界や、
+            魔法使いたちが暮らす庭について。
+          </p>
+        </div>
+
+      </a>
+
+
+      <!-- 庭の住人たち -->
+      <a href="#residents" class="content-card">
+
+        <div class="content-icon icon-residents">
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M32 55
+                 C29 52 10 40 10 25
+                 C10 16 17 11 24 11
+                 C28 11 31 13 32 17
+                 C34 13 37 11 41 11
+                 C48 11 54 16 54 25
+                 C54 40 35 52 32 55 Z"
+              fill="currentColor"
+            />
+          </svg>
+
+        </div>
+
+        <div class="content-text">
+          <h2>庭の住人たち</h2>
+          <p>
+            この庭で暮らす、
+            個性豊かな魔法使いたちをご紹介します。
+          </p>
+        </div>
+
+      </a>
+
+
+      <!-- 小さな図書室 -->
+      <a href="#library" class="content-card">
+
+        <div class="content-icon icon-library">
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M8 13
+                 C16 10 24 12 32 17
+                 C40 12 48 10 56 13
+                 V51
+                 C48 48 40 50 32 55
+                 C24 50 16 48 8 51 Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linejoin="round"
+            />
+
+            <path
+              d="M32 17 V54"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+          </svg>
+
+        </div>
+
+        <div class="content-text">
+          <h2>小さな図書室</h2>
+          <p>
+            魔法使いたちの日々や、
+            小さな物語を読むことができます。
+          </p>
+        </div>
+
+      </a>
+
+
+      <!-- 秘密のクローゼット -->
+      <a href="#closet" class="content-card">
+
+        <div class="content-icon icon-closet">
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path
+              d="M32 56
+                 C28 51 12 42 12 29
+                 C12 20 18 14 25 14
+                 C29 14 32 17 32 21
+                 C32 17 35 14 39 14
+                 C46 14 52 20 52 29
+                 C52 42 36 51 32 56 Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              stroke-linejoin="round"
+            />
+
+            <path
+              d="M32 21 C29 27 24 28 20 28"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M32 21 C35 27 40 28 44 28"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+
+        </div>
+
+        <div class="content-text">
+          <h2>秘密のクローゼット</h2>
+          <p>
+            魔法使いたちの衣装や、
+            お気に入りの装いを紹介します。
+          </p>
+        </div>
+
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
