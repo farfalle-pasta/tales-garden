@@ -1,0 +1,687 @@
+/* ========================================
+   テイルズガーデン
+   基本スタイル
+======================================== */
+
+
+/* ---------- 基本設定 ---------- */
+
+:root {
+  --pink-main: #d98b9c;
+  --pink-light: #fdf1f4;
+  --pink-pale: #fff8fa;
+  --pink-dark: #9f6070;
+
+  --text-main: #5f4b50;
+  --text-soft: #806c71;
+
+  --border-soft: #ead5da;
+  --white: #ffffff;
+
+  --header-height: 72px;
+
+  --content-width: 900px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  padding-top: var(--header-height);
+
+  background: var(--pink-pale);
+  color: var(--text-main);
+
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "YuGothic",
+    "Meiryo",
+    sans-serif;
+
+  line-height: 1.8;
+}
+
+
+/* ---------- リンク ---------- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: var(--header-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: rgba(255, 248, 250, 0.94);
+
+  border-bottom: 1px solid var(--border-soft);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.site-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  color: var(--pink-dark);
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.site-title:hover {
+  color: var(--pink-main);
+  opacity: 0.8;
+}
+
+
+/* ---------- メニューボタン ---------- */
+
+.menu-button {
+  position: relative;
+
+  width: 46px;
+  height: 46px;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: 1px solid var(--border-soft);
+  border-radius: 50%;
+
+  background: var(--white);
+  color: var(--pink-dark);
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.menu-button:hover {
+  background: var(--pink-light);
+  color: var(--pink-main);
+}
+
+
+.menu-button span {
+  display: block;
+
+  width: 18px;
+  height: 1.5px;
+
+  background: currentColor;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* メニューを開いた状態 */
+
+.menu-button.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+
+.menu-button.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+
+.menu-button.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+
+/* ========================================
+   全画面メニュー
+======================================== */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+
+  padding-top: var(--header-height);
+
+  background: var(--pink-light);
+
+  overflow-y: auto;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.menu-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+.menu-inner {
+  width: min(760px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 60px 0 80px;
+}
+
+
+/* ---------- メニュー見出し ---------- */
+
+.menu-heading {
+  margin-bottom: 32px;
+
+  text-align: center;
+}
+
+
+.menu-heading span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--pink-main);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+}
+
+
+.menu-heading h2 {
+  margin: 0;
+
+  color: var(--pink-dark);
+
+  font-size: 1.65rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* ---------- メニュー項目 ---------- */
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px 22px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.menu-item:hover {
+  background: var(--white);
+
+  border-color: #dfbbc4;
+
+  transform: translateY(-2px);
+}
+
+
+/* ---------- SVGアイコン ---------- */
+
+.menu-icon,
+.content-icon {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+
+.menu-icon {
+  width: 54px;
+  height: 54px;
+
+  background: var(--pink-pale);
+}
+
+
+.menu-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* アイコンの色 */
+
+.icon-garden {
+  color: #d79b62;
+}
+
+
+.icon-residents {
+  color: #d98298;
+}
+
+
+.icon-library {
+  color: #9a82a8;
+}
+
+
+.icon-closet {
+  color: #c58a9f;
+}
+
+
+/* ---------- メニュー文字 ---------- */
+
+.menu-item h3 {
+  margin: 0 0 3px;
+
+  color: var(--text-main);
+
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+
+.menu-item p {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 0.82rem;
+}
+
+
+/* ========================================
+   メインビジュアル
+======================================== */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+}
+
+
+.hero-image {
+  width: 100%;
+  height: min(72vh, 680px);
+
+  min-height: 420px;
+
+  background-color: #f4dfe4;
+
+  /*
+    お茶会の画像を入れるときは、
+    background-image を追加します。
+  */
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* ---------- カバー上の文字 ---------- */
+
+.hero-text {
+  position: absolute;
+
+  top: 15%;
+  left: max(7%, calc((100% - var(--content-width)) / 2));
+
+  max-width: 480px;
+
+  padding: 20px;
+}
+
+
+.hero-subtitle {
+  margin: 0 0 6px;
+
+  color: var(--pink-dark);
+
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+}
+
+
+.hero h1 {
+  margin: 0;
+
+  color: var(--pink-dark);
+
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+   世界観紹介
+======================================== */
+
+.intro {
+  width: min(var(--content-width), calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 80px 20px 60px;
+
+  text-align: center;
+}
+
+
+.intro p {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 0.95rem;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* ========================================
+   コンテンツカード
+======================================== */
+
+.contents {
+  width: min(var(--content-width), calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 0 0 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+.content-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  padding: 26px 28px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+
+  box-shadow:
+    0 4px 16px rgba(130, 90, 100, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.content-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #dfbbc4;
+
+  box-shadow:
+    0 8px 24px rgba(130, 90, 100, 0.09);
+}
+
+
+/* ---------- コンテンツアイコン ---------- */
+
+.content-icon {
+  width: 72px;
+  height: 72px;
+
+  background: var(--pink-light);
+}
+
+
+.content-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* ---------- コンテンツ文字 ---------- */
+
+.content-text {
+  flex: 1;
+}
+
+
+.content-text h2 {
+  margin: 0 0 4px;
+
+  color: var(--text-main);
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+}
+
+
+.content-text p {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 0.86rem;
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
+
+@media (max-width: 600px) {
+
+  :root {
+    --header-height: 64px;
+  }
+
+
+  .site-header {
+    padding: 0 16px;
+  }
+
+
+  .site-title {
+    font-size: 1rem;
+  }
+
+
+  .menu-button {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .menu-inner {
+    width: min(100% - 28px, 760px);
+
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+
+  .menu-item {
+    gap: 15px;
+
+    padding: 17px;
+  }
+
+
+  .menu-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .menu-icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  .menu-item h3 {
+    font-size: 0.98rem;
+  }
+
+
+  .menu-item p {
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+
+
+  .hero-image {
+    height: 62vh;
+    min-height: 420px;
+  }
+
+
+  .hero-text {
+    top: 10%;
+    left: 5%;
+
+    padding: 12px;
+  }
+
+
+  .hero-subtitle {
+    font-size: 0.65rem;
+  }
+
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+
+  .intro {
+    padding-top: 60px;
+    padding-bottom: 45px;
+  }
+
+
+  .intro p {
+    font-size: 0.85rem;
+  }
+
+
+  .contents {
+    width: calc(100% - 28px);
+
+    padding-bottom: 70px;
+
+    gap: 14px;
+  }
+
+
+  .content-card {
+    gap: 16px;
+
+    padding: 20px;
+    border-radius: 17px;
+  }
+
+
+  .content-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+
+  .content-icon svg {
+    width: 33px;
+    height: 33px;
+  }
+
+
+  .content-text h2 {
+    font-size: 1rem;
+  }
+
+
+  .content-text p {
+    font-size: 0.77rem;
+    line-height: 1.65;
+  }
+
+}
