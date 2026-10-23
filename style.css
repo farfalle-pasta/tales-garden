@@ -4,22 +4,33 @@
 ======================================== */
 
 
-/* ---------- 基本設定 ---------- */
+/* ---------- 色・基本設定 ---------- */
 
 :root {
-  --pink-main: #d98b9c;
-  --pink-light: #fdf1f4;
-  --pink-pale: #fff8fa;
-  --pink-dark: #9f6070;
+  /* 通常ページ */
+  --cream-main: #fbf7ef;
+  --cream-light: #fffaf3;
+  --cream-soft: #f6f0e7;
 
-  --text-main: #5f4b50;
-  --text-soft: #806c71;
-
-  --border-soft: #ead5da;
+  /* カード */
   --white: #ffffff;
 
-  --header-height: 72px;
+  /* 文字 */
+  --text-main: #625957;
+  --text-soft: #897b76;
+  --text-light: #a18f89;
 
+  /* 線 */
+  --border-soft: #e8ded2;
+
+  /* アクセント */
+  --pink-main: #d98298;
+  --pink-dark: #a96376;
+
+  /* メニュー */
+  --menu-bg: #fdf1f4;
+
+  --header-height: 72px;
   --content-width: 900px;
 }
 
@@ -38,7 +49,7 @@ body {
   margin: 0;
   padding-top: var(--header-height);
 
-  background: var(--pink-pale);
+  background: var(--cream-main);
   color: var(--text-main);
 
   font-family:
@@ -51,8 +62,6 @@ body {
   line-height: 1.8;
 }
 
-
-/* ---------- リンク ---------- */
 
 a {
   color: inherit;
@@ -79,7 +88,7 @@ a {
 
   padding: 0 24px;
 
-  background: rgba(255, 248, 250, 0.94);
+  background: rgba(255, 250, 243, 0.96);
 
   border-bottom: 1px solid var(--border-soft);
 
@@ -138,7 +147,7 @@ a {
 
 
 .menu-button:hover {
-  background: var(--pink-light);
+  background: var(--cream-soft);
   color: var(--pink-main);
 }
 
@@ -185,7 +194,7 @@ a {
 
   padding-top: var(--header-height);
 
-  background: var(--pink-light);
+  background: var(--menu-bg);
 
   overflow-y: auto;
 
@@ -268,9 +277,9 @@ a {
 
   padding: 20px 22px;
 
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.78);
 
-  border: 1px solid var(--border-soft);
+  border: 1px solid #ead9de;
   border-radius: 18px;
 
   transition:
@@ -289,7 +298,9 @@ a {
 }
 
 
-/* ---------- SVGアイコン ---------- */
+/* ========================================
+   SVGアイコン
+======================================== */
 
 .menu-icon,
 .content-icon {
@@ -300,14 +311,15 @@ a {
   justify-content: center;
 
   border-radius: 50%;
+
+  /* アイコン背景は統一 */
+  background: var(--cream-soft);
 }
 
 
 .menu-icon {
   width: 54px;
   height: 54px;
-
-  background: var(--pink-pale);
 }
 
 
@@ -317,25 +329,25 @@ a {
 }
 
 
-/* アイコンの色 */
+/* アイコン本体だけ色を変える */
 
 .icon-garden {
-  color: #d79b62;
+  color: #d59a5b;
 }
 
 
 .icon-residents {
-  color: #d98298;
+  color: #d47791;
 }
 
 
 .icon-library {
-  color: #9a82a8;
+  color: #9b82aa;
 }
 
 
 .icon-closet {
-  color: #c58a9f;
+  color: #6d9a9a;
 }
 
 
@@ -377,12 +389,7 @@ a {
 
   min-height: 420px;
 
-  background-color: #f4dfe4;
-
-  /*
-    お茶会の画像を入れるときは、
-    background-image を追加します。
-  */
+  background-color: #eee5d8;
 
   background-position: center;
   background-size: cover;
@@ -435,14 +442,16 @@ a {
 
   margin: 0 auto;
 
-  padding: 80px 20px 60px;
+  padding: 72px 20px 56px;
 
   text-align: center;
 }
 
 
 .intro p {
-  margin: 0;
+  margin: 0 auto;
+
+  max-width: 760px;
 
   color: var(--text-soft);
 
@@ -482,7 +491,7 @@ a {
   border-radius: 20px;
 
   box-shadow:
-    0 4px 16px rgba(130, 90, 100, 0.05);
+    0 4px 16px rgba(100, 80, 65, 0.04);
 
   transition:
     transform 0.25s ease,
@@ -494,10 +503,10 @@ a {
 .content-card:hover {
   transform: translateY(-3px);
 
-  border-color: #dfbbc4;
+  border-color: #d9cabc;
 
   box-shadow:
-    0 8px 24px rgba(130, 90, 100, 0.09);
+    0 8px 24px rgba(100, 80, 65, 0.08);
 }
 
 
@@ -506,8 +515,6 @@ a {
 .content-icon {
   width: 72px;
   height: 72px;
-
-  background: var(--pink-light);
 }
 
 
@@ -635,13 +642,16 @@ a {
 
 
   .intro {
-    padding-top: 60px;
-    padding-bottom: 45px;
+    width: calc(100% - 28px);
+
+    padding-top: 52px;
+    padding-bottom: 42px;
   }
 
 
   .intro p {
     font-size: 0.85rem;
+    line-height: 2;
   }
 
 
