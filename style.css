@@ -384,7 +384,7 @@ a {
   font-feature-settings: "liga";
 
   font-variation-settings:
-    "FILL" 0,
+    "FILL" 1,
     "wght" 400,
     "GRAD" 0,
     "opsz" 40;
