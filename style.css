@@ -4,38 +4,58 @@
 ======================================== */
 
 
-/* ---------- 色・基本設定 ---------- */
+/* ========================================
+   色・基本設定
+======================================== */
 
 :root {
 
-  /* 通常ページ */
+  /* ---------- 背景 ---------- */
+
   --cream-main: #fffaf3;
   --cream-light: #fffdf9;
   --cream-soft: #f8f0e7;
 
-  /* カード */
+
+  /* ---------- カード ---------- */
+
   --white: #ffffff;
 
-  /* 文字 */
+
+  /* ---------- 文字 ---------- */
+
   --text-main: #625957;
   --text-soft: #897b76;
   --text-light: #a18f89;
 
-  /* 線 */
+
+  /* ---------- 線 ---------- */
+
   --border-soft: #e8ded2;
 
-  /* アクセント */
+
+  /* ---------- アクセント ---------- */
+
   --pink-main: #d98298;
   --pink-dark: #a96376;
 
-  /* メニュー */
+  --gold-soft: #d5a05f;
+
+
+  /* ---------- メニュー ---------- */
+
   --menu-bg: #fff7f4;
 
-  /* アイコン */
+
+  /* ---------- アイコン ---------- */
+
   --icon-garden: #d59a5b;
   --icon-residents: #d47791;
   --icon-library: #9b82aa;
   --icon-closet: #6d9a9a;
+
+
+  /* ---------- レイアウト ---------- */
 
   --header-height: 72px;
   --content-width: 900px;
@@ -325,11 +345,6 @@ a {
    Material Symbols アイコン
 ======================================== */
 
-/*
-  アイコンの背景は全種類共通。
-  アイコン本体だけ、それぞれの色にする。
-*/
-
 .menu-icon,
 .content-icon {
   flex: 0 0 auto;
@@ -352,7 +367,7 @@ a {
 }
 
 
-/* Material Symbols 本体 */
+/* ---------- Material Symbols ---------- */
 
 .menu-icon .material-symbols-rounded,
 .content-icon .material-symbols-rounded {
@@ -362,23 +377,18 @@ a {
   font-family: "Material Symbols Rounded";
 
   font-weight: normal;
-
   font-style: normal;
 
   line-height: 1;
-
   letter-spacing: normal;
 
   text-transform: none;
-
   white-space: nowrap;
 
   word-wrap: normal;
-
   direction: ltr;
 
   -webkit-font-feature-settings: "liga";
-
   -webkit-font-smoothing: antialiased;
 
   font-feature-settings: "liga";
@@ -402,32 +412,25 @@ a {
    アイコンカラー
 ======================================== */
 
-/* 魔法の庭 */
-
 .icon-garden {
   color: var(--icon-garden);
 }
 
 
-/* 庭の住人たち */
-
 .icon-residents {
   color: var(--icon-residents);
 }
+
 
 .icon-residents .material-symbols-rounded {
   transform: translateY(2px);
 }
 
 
-/* 小さな図書室 */
-
 .icon-library {
   color: var(--icon-library);
 }
 
-
-/* 秘密のクローゼット */
 
 .icon-closet {
   color: var(--icon-closet);
@@ -524,10 +527,89 @@ a {
 
 
 /* ========================================
-   世界観紹介
+   共通セクション見出し
+======================================== */
+
+/*
+  「welcome / テイルズガーデンへようこそ！」
+  「information / ご案内」
+  などで使用します。
+*/
+
+.section-heading {
+  margin: 0 auto 36px;
+
+  text-align: center;
+}
+
+
+.section-heading .heading-en {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--pink-main);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: lowercase;
+}
+
+
+.section-heading h2 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  color: var(--pink-dark);
+
+  font-size: 1.45rem;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* 見出し左右の小さな装飾 */
+
+.section-heading h2::before,
+.section-heading h2::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 24px;
+  height: 1px;
+
+  background: var(--border-soft);
+}
+
+
+.section-heading h2::before {
+  right: calc(100% + 14px);
+}
+
+
+.section-heading h2::after {
+  left: calc(100% + 14px);
+}
+
+
+/* ========================================
+   Welcome / 世界観紹介
 ======================================== */
 
 .intro {
+  position: relative;
+
   width: min(
     var(--content-width),
     calc(100% - 40px)
@@ -535,11 +617,54 @@ a {
 
   margin: 0 auto;
 
-  padding: 72px 20px 56px;
+  padding: 72px 20px 64px;
 
   text-align: center;
 }
 
+
+/* 上下の装飾線 */
+
+.intro::before,
+.intro::after {
+
+  content: "";
+
+  display: block;
+
+  width: min(180px, 45%);
+
+  height: 1px;
+
+  margin: 0 auto;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border-soft),
+    transparent
+  );
+}
+
+
+.intro::before {
+  margin-bottom: 32px;
+}
+
+
+.intro::after {
+  margin-top: 36px;
+}
+
+
+/* Welcome 見出し */
+
+.intro .section-heading {
+  margin-bottom: 26px;
+}
+
+
+/* 紹介文 */
 
 .intro p {
   margin: 0 auto;
@@ -555,10 +680,10 @@ a {
 
 
 /* ========================================
-   コンテンツカード
+   Information / コンテンツ
 ======================================== */
 
-.contents {
+.contents-section {
   width: min(
     var(--content-width),
     calc(100% - 40px)
@@ -566,12 +691,27 @@ a {
 
   margin: 0 auto;
 
-  padding: 0 0 100px;
+  padding: 24px 0 100px;
+}
 
+
+/* 見出し */
+
+.contents-section .section-heading {
+  margin-bottom: 34px;
+}
+
+
+/* ---------- コンテンツカード ---------- */
+
+.contents {
   display: flex;
   flex-direction: column;
 
   gap: 18px;
+
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -619,8 +759,6 @@ a {
 }
 
 
-/* Material Symbols */
-
 .content-icon .material-symbols-rounded {
   font-size: 40px;
 }
@@ -641,7 +779,6 @@ a {
   color: var(--text-main);
 
   font-size: 1.15rem;
-
   font-weight: 600;
 
   letter-spacing: 0.06em;
@@ -660,6 +797,130 @@ a {
 
 
 /* ========================================
+   その他コンテンツ
+   更新情報・お知らせなど
+======================================== */
+
+.extra-section {
+  width: min(
+    var(--content-width),
+    calc(100% - 40px)
+  );
+
+  margin: 0 auto;
+
+  padding: 0 0 90px;
+}
+
+
+/* ---------- その他コンテンツの箱 ---------- */
+
+.extra-box {
+  padding: 28px 30px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid var(--border-soft);
+
+  border-radius: 20px;
+}
+
+
+/* ---------- お知らせ一覧 ---------- */
+
+.news-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.news-item {
+  display: flex;
+  align-items: baseline;
+
+  gap: 18px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #eee5dc;
+}
+
+
+.news-item:first-child {
+  padding-top: 0;
+}
+
+
+.news-item:last-child {
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+
+/* 日付 */
+
+.news-date {
+  flex: 0 0 auto;
+
+  color: var(--text-light);
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* お知らせ本文 */
+
+.news-text {
+  color: var(--text-soft);
+
+  font-size: 0.84rem;
+}
+
+
+/* リンク */
+
+.news-item a {
+  transition: color 0.2s ease;
+}
+
+
+.news-item a:hover {
+  color: var(--pink-main);
+}
+
+
+/* ========================================
+   フッター
+======================================== */
+
+.site-footer {
+  padding: 48px 20px 56px;
+
+  text-align: center;
+
+  background: var(--cream-soft);
+
+  border-top: 1px solid var(--border-soft);
+}
+
+
+.site-footer p {
+  margin: 0;
+
+  color: var(--pink-dark);
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* ========================================
    スマートフォン
 ======================================== */
 
@@ -670,7 +931,9 @@ a {
   }
 
 
-  /* ---------- ヘッダー ---------- */
+  /* ======================================
+     ヘッダー
+  ====================================== */
 
   .site-header {
     padding: 0 16px;
@@ -688,7 +951,9 @@ a {
   }
 
 
-  /* ---------- メニュー ---------- */
+  /* ======================================
+     メニュー
+  ====================================== */
 
   .menu-inner {
     width: min(
@@ -731,7 +996,9 @@ a {
   }
 
 
-  /* ---------- メインビジュアル ---------- */
+  /* ======================================
+     メインビジュアル
+  ====================================== */
 
   .hero-image {
     height: 62vh;
@@ -758,13 +1025,67 @@ a {
   }
 
 
-  /* ---------- 世界観紹介 ---------- */
+  /* ======================================
+     セクション見出し
+  ====================================== */
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+
+  .section-heading .heading-en {
+    font-size: 0.62rem;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  .section-heading h2 {
+    font-size: 1.2rem;
+  }
+
+
+  .section-heading h2::before,
+  .section-heading h2::after {
+    width: 18px;
+  }
+
+
+  .section-heading h2::before {
+    right: calc(100% + 10px);
+  }
+
+
+  .section-heading h2::after {
+    left: calc(100% + 10px);
+  }
+
+
+  /* ======================================
+     Welcome
+  ====================================== */
 
   .intro {
     width: calc(100% - 28px);
 
-    padding-top: 52px;
-    padding-bottom: 42px;
+    padding-top: 48px;
+    padding-bottom: 52px;
+  }
+
+
+  .intro::before {
+    margin-bottom: 26px;
+  }
+
+
+  .intro::after {
+    margin-top: 30px;
+  }
+
+
+  .intro .section-heading {
+    margin-bottom: 22px;
   }
 
 
@@ -772,16 +1093,29 @@ a {
     font-size: 0.85rem;
 
     line-height: 2;
+
+    letter-spacing: 0.03em;
   }
 
 
-  /* ---------- コンテンツ ---------- */
+  /* ======================================
+     Information
+  ====================================== */
 
-  .contents {
+  .contents-section {
     width: calc(100% - 28px);
 
+    padding-top: 8px;
     padding-bottom: 70px;
+  }
 
+
+  .contents-section .section-heading {
+    margin-bottom: 28px;
+  }
+
+
+  .contents {
     gap: 14px;
   }
 
@@ -794,6 +1128,8 @@ a {
     border-radius: 17px;
   }
 
+
+  /* ---------- アイコン ---------- */
 
   .content-icon {
     width: 58px;
@@ -812,6 +1148,8 @@ a {
   }
 
 
+  /* ---------- 文字 ---------- */
+
   .content-text h2 {
     font-size: 1rem;
   }
@@ -821,6 +1159,63 @@ a {
     font-size: 0.77rem;
 
     line-height: 1.65;
+  }
+
+
+  /* ======================================
+     その他コンテンツ
+  ====================================== */
+
+  .extra-section {
+    width: calc(100% - 28px);
+
+    padding-bottom: 64px;
+  }
+
+
+  .extra-box {
+    padding: 22px 20px;
+
+    border-radius: 17px;
+  }
+
+
+  .news-item {
+    display: block;
+
+    padding: 12px 0;
+  }
+
+
+  .news-date {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 0.7rem;
+  }
+
+
+  .news-text {
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* ======================================
+     フッター
+  ====================================== */
+
+  .site-footer {
+    padding: 40px 20px 48px;
+  }
+
+
+  .site-footer p {
+    font-size: 0.7rem;
+
+    letter-spacing: 0.15em;
   }
 
 }
