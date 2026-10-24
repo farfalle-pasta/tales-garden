@@ -560,10 +560,6 @@ a {
 
 
 .section-heading h2 {
-  position: relative;
-
-  display: inline-block;
-
   margin: 0;
 
   color: var(--pink-dark);
@@ -572,34 +568,6 @@ a {
   font-weight: 600;
 
   letter-spacing: 0.1em;
-}
-
-
-/* 見出し左右の小さな装飾 */
-
-.section-heading h2::before,
-.section-heading h2::after {
-
-  content: "";
-
-  position: absolute;
-
-  top: 50%;
-
-  width: 24px;
-  height: 1px;
-
-  background: var(--border-soft);
-}
-
-
-.section-heading h2::before {
-  right: calc(100% + 14px);
-}
-
-
-.section-heading h2::after {
-  left: calc(100% + 14px);
 }
 
 
@@ -623,44 +591,47 @@ a {
 }
 
 
-/* 上下の装飾線 */
+/* ---------- Welcome 上部の装飾 ---------- */
+
+/*
+  シンプルな横線ではなく、
+  小さなモチーフを組み合わせて
+  世界観を感じられる装飾にしています。
+*/
 
 .intro::before,
 .intro::after {
-
-  content: "";
-
   display: block;
 
-  width: min(180px, 45%);
+  color: var(--pink-main);
 
-  height: 1px;
+  font-size: 0.78rem;
+  letter-spacing: 0.45em;
 
-  margin: 0 auto;
+  line-height: 1;
 
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--border-soft),
-    transparent
-  );
+  opacity: 0.8;
 }
 
 
 .intro::before {
-  margin-bottom: 32px;
+  content: "✦ ･ ｡ ･ ✦";
+
+  margin-bottom: 34px;
 }
 
 
 .intro::after {
-  margin-top: 36px;
+  content: "✦ ･ ｡ ･ ✦";
+
+  margin-top: 38px;
 }
 
 
 /* Welcome 見出し */
 
 .intro .section-heading {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 
@@ -898,14 +869,17 @@ a {
    フッター
 ======================================== */
 
+/*
+  フッターは背景や境界線を設けず、
+  サイトの最後に余白をとって
+  「― テイルズガーデン ―」だけを
+  静かに置くデザインにしています。
+*/
+
 .site-footer {
   padding: 48px 20px 56px;
 
   text-align: center;
-
-  background: var(--cream-soft);
-
-  border-top: 1px solid var(--border-soft);
 }
 
 
@@ -1046,22 +1020,6 @@ a {
   }
 
 
-  .section-heading h2::before,
-  .section-heading h2::after {
-    width: 18px;
-  }
-
-
-  .section-heading h2::before {
-    right: calc(100% + 10px);
-  }
-
-
-  .section-heading h2::after {
-    left: calc(100% + 10px);
-  }
-
-
   /* ======================================
      Welcome
   ====================================== */
@@ -1071,6 +1029,16 @@ a {
 
     padding-top: 48px;
     padding-bottom: 52px;
+  }
+
+
+  /* ---------- Welcome 装飾 ---------- */
+
+  .intro::before,
+  .intro::after {
+    font-size: 0.68rem;
+
+    letter-spacing: 0.35em;
   }
 
 
