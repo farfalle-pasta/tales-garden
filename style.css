@@ -354,8 +354,8 @@ a {
 
 /* Material Symbols 本体 */
 
-.menu-icon .material-symbols-outlined,
-.content-icon .material-symbols-outlined {
+.menu-icon .material-symbols-rounded,
+.content-icon .material-symbols-rounded {
 
   display: block;
 
@@ -393,7 +393,7 @@ a {
 
 /* ---------- アイコンサイズ ---------- */
 
-.menu-icon .material-symbols-outlined {
+.menu-icon .material-symbols-rounded {
   font-size: 30px;
 }
 
@@ -617,7 +617,7 @@ a {
 
 /* Material Symbols */
 
-.content-icon .material-symbols-outlined {
+.content-icon .material-symbols-rounded {
   font-size: 40px;
 }
 
@@ -710,7 +710,7 @@ a {
   }
 
 
-  .menu-icon .material-symbols-outlined {
+  .menu-icon .material-symbols-rounded {
     font-size: 27px;
   }
 
@@ -797,7 +797,7 @@ a {
   }
 
 
-  .content-icon .material-symbols-outlined {
+  .content-icon .material-symbols-rounded {
     font-size: 33px;
 
     font-variation-settings:
