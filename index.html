@@ -1,270 +1,537 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="ja"><head>
+  <meta charset="UTF-8"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
 
-  <title>テイルズガーデン</title>
-  <meta
-    name="description"
-    content="魔法使いたちが暮らす、小さな物語の庭。"
-  >
+«»
 
-  <!-- Google Material Symbols -->
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,1,0..200"
-/>
-
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- 共通ヘッダー -->
-  <div id="header"></div>
+  <title>テイルズガーデン</title>  <!-- Material Symbols Rounded -->  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,1,0"
+  >  <!-- CSS -->  <link rel="stylesheet" href="style.css">
+</head><body>  <!-- ========================================
+       ヘッダー
+  ======================================== -->  <header class="site-header"><a href="#" class="site-title">
+  テイルズガーデン
+</a>
 
 
-  <!-- 全画面メニュー -->
-  <nav
-    class="menu-overlay"
-    id="menuOverlay"
-    aria-hidden="true"
-  >
+<!-- メニューボタン -->
 
-    <div class="menu-inner">
+<button
+  class="menu-button"
+  type="button"
+  aria-label="メニューを開く"
+  aria-expanded="false"
+>
 
-      <div class="menu-heading">
-        <span>INFORMATION</span>
-        <h2>ご案内</h2>
-      </div>
+  <span></span>
+  <span></span>
+  <span></span>
 
+</button>
 
-      <div class="menu-items">
-
-        <!-- 魔法の庭 -->
-        <a href="#garden" class="menu-item">
-
-          <div class="menu-icon icon-garden">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    kid_star
-  </span>
-</div>
-
-          <div>
-            <h3>魔法の庭</h3>
-            <p>
-              テイルズガーデンの世界や、
-              魔法使いたちが暮らす庭について。
-            </p>
-          </div>
-
-        </a>
+  </header>  <!-- ========================================
+       全画面メニュー
+  ======================================== -->  <div class="menu-overlay"><div class="menu-inner">
 
 
-        <!-- 庭の住人たち -->
-        <a href="#residents" class="menu-item">
+  <!-- メニュー見出し -->
 
-          <div class="menu-icon icon-residents">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    favorite
-  </span>
-</div>
+  <div class="menu-heading">
 
-          <div>
-            <h3>庭の住人たち</h3>
-            <p>
-              この庭で暮らす、
-              個性豊かな魔法使いたちをご紹介します。
-            </p>
-          </div>
+    <span>menu</span>
 
-        </a>
+    <h2>ご案内</h2>
+
+  </div>
 
 
-        <!-- 小さな図書室 -->
-        <a href="#library" class="menu-item">
+  <!-- メニュー項目 -->
 
-          <div class="menu-icon icon-library">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    import_contacts
-  </span>
-</div>
-
-          <div>
-            <h3>小さな図書室</h3>
-            <p>
-              魔法使いたちの日々や、
-              小さな物語を読むことができます。
-            </p>
-          </div>
-
-        </a>
+  <nav class="menu-items">
 
 
-        <!-- 秘密のクローゼット -->
-        <a href="#closet" class="menu-item">
+    <!-- 魔法の庭 -->
 
-          <div class="menu-icon icon-closet">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    music_note_2
-  </span>
-</div>
+    <a href="#garden" class="menu-item">
 
-          <div>
-            <h3>秘密のクローゼット</h3>
-            <p>
-              魔法使いたちの衣装や、
-              お気に入りの装いを紹介します。
-            </p>
-          </div>
+      <div class="menu-icon icon-garden">
 
-        </a>
+        <span class="material-symbols-rounded">
+          yard
+        </span>
 
       </div>
 
-    </div>
+
+      <div>
+
+        <h3>
+          魔法の庭
+        </h3>
+
+        <p>
+          テイルズガーデンの世界について
+        </p>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- 庭の住人たち -->
+
+    <a href="#residents" class="menu-item">
+
+      <div class="menu-icon icon-residents">
+
+        <span class="material-symbols-rounded">
+          favorite
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          庭の住人たち
+        </h3>
+
+        <p>
+          この庭で暮らす住人たち
+        </p>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- 小さな図書室 -->
+
+    <a href="#library" class="menu-item">
+
+      <div class="menu-icon icon-library">
+
+        <span class="material-symbols-rounded">
+          menu_book
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          小さな図書室
+        </h3>
+
+        <p>
+          物語や記録を読む場所
+        </p>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- 秘密のクローゼット -->
+
+    <a href="#closet" class="menu-item">
+
+      <div class="menu-icon icon-closet">
+
+        <span class="material-symbols-rounded">
+          checkroom
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          秘密のクローゼット
+        </h3>
+
+        <p>
+          設定資料や小さな秘密
+        </p>
+
+      </div>
+
+    </a>
 
   </nav>
 
+</div>
 
-  <main>
+  </div>  <!-- ========================================
+       メイン
+  ======================================== -->  <main><!-- ======================================
+     メインビジュアル
+====================================== -->
 
-    <!-- カバー -->
-    <section class="hero">
+<section class="hero">
 
-      <div class="hero-image">
-        <!-- 後ほどお茶会の画像をここに入れます -->
+  <div
+    class="hero-image"
+    style="background-image: url('images/hero.jpg');"
+  ></div>
+
+
+  <div class="hero-text">
+
+    <p class="hero-subtitle">
+      A LITTLE GARDEN OF STORIES
+    </p>
+
+    <h1>
+      テイルズガーデン
+    </h1>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================
+     Welcome / 世界観紹介
+====================================== -->
+
+<section class="intro" id="welcome">
+
+
+  <div class="section-heading">
+
+    <span class="heading-en">
+      welcome
+    </span>
+
+    <h2>
+      テイルズガーデンへようこそ！
+    </h2>
+
+  </div>
+
+
+  <p>
+    ここは、小さな物語と個性豊かな住人たちが暮らす、
+    ひとつの庭のような世界です。
+    <br>
+    日々の出来事や物語、住人たちのことを、
+    どうぞゆっくり覗いていってください。
+  </p>
+
+</section>
+
+
+
+<!-- ======================================
+     Information / ご案内
+====================================== -->
+
+<section class="contents-section" id="information">
+
+
+  <div class="section-heading">
+
+    <span class="heading-en">
+      information
+    </span>
+
+    <h2>
+      ご案内
+    </h2>
+
+  </div>
+
+
+  <div class="contents">
+
+
+    <!-- 魔法の庭 -->
+
+    <a
+      href="#garden"
+      class="content-card"
+      id="garden"
+    >
+
+      <div class="content-icon icon-garden">
+
+        <span class="material-symbols-rounded">
+          yard
+        </span>
+
       </div>
 
-      <div class="hero-text">
 
-        <p class="hero-subtitle">
-          A little garden of magical stories
+      <div class="content-text">
+
+        <h2>
+          魔法の庭
+        </h2>
+
+        <p>
+          テイルズガーデンの世界観や、
+          この庭にまつわる基本的な設定をご紹介します。
         </p>
 
-        <h1>テイルズガーデン</h1>
+      </div>
+
+    </a>
+
+
+
+    <!-- 庭の住人たち -->
+
+    <a
+      href="#residents"
+      class="content-card"
+      id="residents"
+    >
+
+      <div class="content-icon icon-residents">
+
+        <span class="material-symbols-rounded">
+          favorite
+        </span>
 
       </div>
 
-    </section>
+
+      <div class="content-text">
+
+        <h2>
+          庭の住人たち
+        </h2>
+
+        <p>
+          テイルズガーデンで暮らす、
+          個性豊かな住人たちをご紹介します。
+        </p>
+
+      </div>
+
+    </a>
 
 
-    <!-- 世界観紹介 -->
-    <section class="intro">
 
-      <p>
-        魔法使いたちが暮らす、小さな物語の庭。<br>
-        好きなものや新たな出会いを楽しみながら、<br>
-        今日も庭には新しい物語が生まれています。
-      </p>
+    <!-- 小さな図書室 -->
 
-    </section>
+    <a
+      href="#library"
+      class="content-card"
+      id="library"
+    >
 
+      <div class="content-icon icon-library">
 
-    <!-- 4つのコンテンツ -->
-    <section class="contents">
+        <span class="material-symbols-rounded">
+          menu_book
+        </span>
 
-
-      <!-- 魔法の庭 -->
-      <a href="#garden" class="content-card">
-
-        <div class="content-icon icon-garden">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    kid_star
-  </span>
-</div>
-
-        <div class="content-text">
-
-          <h2>魔法の庭</h2>
-
-          <p>
-            テイルズガーデンの世界や、
-            魔法使いたちが暮らす庭について。
-          </p>
-
-        </div>
-
-      </a>
+      </div>
 
 
-      <!-- 庭の住人たち -->
-      <a href="#residents" class="content-card">
+      <div class="content-text">
 
-        <div class="content-icon icon-residents">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    favorite
-  </span>
-</div>
+        <h2>
+          小さな図書室
+        </h2>
 
-        <div class="content-text">
+        <p>
+          物語や出来事、世界に残された記録を
+          ゆっくり読むことができます。
+        </p>
 
-          <h2>庭の住人たち</h2>
+      </div>
 
-          <p>
-            この庭で暮らす、
-            個性豊かな魔法使いたちをご紹介します。
-          </p>
-
-        </div>
-
-      </a>
+    </a>
 
 
-      <!-- 小さな図書室 -->
-      <a href="#library" class="content-card">
 
-        <div class="content-icon icon-library">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    import_contacts
-  </span>
-</div>
+    <!-- 秘密のクローゼット -->
 
-        <div class="content-text">
+    <a
+      href="#closet"
+      class="content-card"
+      id="closet"
+    >
 
-          <h2>小さな図書室</h2>
+      <div class="content-icon icon-closet">
 
-          <p>
-            魔法使いたちの日々や、
-            小さな物語を読むことができます。
-          </p>
+        <span class="material-symbols-rounded">
+          checkroom
+        </span>
 
-        </div>
-
-      </a>
+      </div>
 
 
-      <!-- 秘密のクローゼット -->
-      <a href="#closet" class="content-card">
+      <div class="content-text">
 
-        <div class="content-icon icon-closet">
-  <span class="material-symbols-rounded" aria-hidden="true">
-    music_note_2
-  </span>
-</div>
+        <h2>
+          秘密のクローゼット
+        </h2>
 
-        <div class="content-text">
+        <p>
+          設定資料や小さな秘密など、
+          庭の裏側にあるものを覗いてみてください。
+        </p>
 
-          <h2>秘密のクローゼット</h2>
+      </div>
 
-          <p>
-            魔法使いたちの衣装や、
-            お気に入りの装いを紹介します。
-          </p>
-
-        </div>
-
-      </a>
+    </a>
 
 
-    </section>
+  </div>
 
-  </main>
+</section>
 
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
 
-</body>
-</html>
+<!-- ======================================
+     その他コンテンツ
+     更新情報・お知らせ
+====================================== -->
+
+<section class="extra-section">
+
+
+  <div class="section-heading">
+
+    <span class="heading-en">
+      news
+    </span>
+
+    <h2>
+      お知らせ
+    </h2>
+
+  </div>
+
+
+  <div class="extra-box">
+
+
+    <ul class="news-list">
+
+
+      <li class="news-item">
+
+        <time class="news-date" datetime="2026-10-25">
+          2026.10.25
+        </time>
+
+        <span class="news-text">
+          テイルズガーデンのサイトを公開しました。
+        </span>
+
+      </li>
+
+
+      <li class="news-item">
+
+        <time class="news-date" datetime="2026-10-20">
+          2026.10.20
+        </time>
+
+        <span class="news-text">
+          世界観・設定資料を更新しました。
+        </span>
+
+      </li>
+
+
+      <li class="news-item">
+
+        <time class="news-date" datetime="2026-10-15">
+          2026.10.15
+        </time>
+
+        <span class="news-text">
+          庭の住人たちの紹介を追加しました。
+        </span>
+
+      </li>
+
+
+    </ul>
+
+  </div>
+
+</section>
+
+  </main>  <!-- ========================================
+       フッター
+  ======================================== -->  <footer class="site-footer"><p>
+  ― テイルズガーデン ―
+</p>
+
+  </footer>  <!-- ========================================
+       メニュー用 JavaScript
+  ======================================== -->  <script>
+
+    const menuButton =
+      document.querySelector(".menu-button");
+
+    const menuOverlay =
+      document.querySelector(".menu-overlay");
+
+
+    /* ---------- メニュー開閉 ---------- */
+
+    menuButton.addEventListener("click", () => {
+
+      const isOpen =
+        menuButton.classList.toggle("is-open");
+
+      menuOverlay.classList.toggle(
+        "is-open",
+        isOpen
+      );
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+    });
+
+
+    /* ---------- メニュー内リンクを押したら閉じる ---------- */
+
+    const menuLinks =
+      document.querySelectorAll(
+        ".menu-overlay a"
+      );
+
+
+    menuLinks.forEach((link) => {
+
+      link.addEventListener("click", () => {
+
+        menuButton.classList.remove(
+          "is-open"
+        );
+
+        menuOverlay.classList.remove(
+          "is-open"
+        );
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+  </script></body></html>
