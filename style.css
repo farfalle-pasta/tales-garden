@@ -1187,3 +1187,7 @@ a {
   }
 
 }
+
+body {
+  background: red !important;
+}
