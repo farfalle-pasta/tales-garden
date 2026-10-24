@@ -7,10 +7,11 @@
 /* ---------- 色・基本設定 ---------- */
 
 :root {
+
   /* 通常ページ */
-  --cream-main: #fff9f5;
-  --cream-light: #fffdfb;
-  --cream-soft: #fdf3f1;
+  --cream-main: #fffaf3;
+  --cream-light: #fffdf9;
+  --cream-soft: #f8f0e7;
 
   /* カード */
   --white: #ffffff;
@@ -28,12 +29,22 @@
   --pink-dark: #a96376;
 
   /* メニュー */
-  --menu-bg: #fdf1f4;
+  --menu-bg: #fff7f4;
+
+  /* アイコン */
+  --icon-garden: #d59a5b;
+  --icon-residents: #d47791;
+  --icon-library: #9b82aa;
+  --icon-closet: #6d9a9a;
 
   --header-height: 72px;
   --content-width: 900px;
 }
 
+
+/* ========================================
+   基本設定
+======================================== */
 
 * {
   box-sizing: border-box;
@@ -88,7 +99,7 @@ a {
 
   padding: 0 24px;
 
-  background: rgba(255, 253, 251, 0.96);
+  background: rgba(255, 253, 249, 0.97);
 
   border-bottom: 1px solid var(--border-soft);
 
@@ -96,9 +107,12 @@ a {
 }
 
 
+/* ---------- サイトタイトル ---------- */
+
 .site-title {
   font-size: 1.15rem;
   font-weight: 600;
+
   letter-spacing: 0.08em;
 
   color: var(--pink-dark);
@@ -129,6 +143,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   gap: 5px;
 
   border: 1px solid var(--border-soft);
@@ -166,7 +181,7 @@ a {
 }
 
 
-/* メニューを開いた状態 */
+/* ---------- メニューを開いた状態 ---------- */
 
 .menu-button.is-open span:nth-child(1) {
   transform: translateY(6.5px) rotate(45deg);
@@ -190,6 +205,7 @@ a {
 .menu-overlay {
   position: fixed;
   inset: 0;
+
   z-index: 900;
 
   padding-top: var(--header-height);
@@ -213,6 +229,7 @@ a {
 .menu-overlay.is-open {
   opacity: 1;
   visibility: visible;
+
   transform: translateY(0);
 }
 
@@ -226,7 +243,9 @@ a {
 }
 
 
-/* ---------- メニュー見出し ---------- */
+/* ========================================
+   メニュー見出し
+======================================== */
 
 .menu-heading {
   margin-bottom: 32px;
@@ -261,11 +280,14 @@ a {
 }
 
 
-/* ---------- メニュー項目 ---------- */
+/* ========================================
+   メニュー項目
+======================================== */
 
 .menu-items {
   display: flex;
   flex-direction: column;
+
   gap: 14px;
 }
 
@@ -273,11 +295,12 @@ a {
 .menu-item {
   display: flex;
   align-items: center;
+
   gap: 20px;
 
   padding: 20px 22px;
 
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.82);
 
   border: 1px solid #ead9de;
   border-radius: 18px;
@@ -299,8 +322,13 @@ a {
 
 
 /* ========================================
-   SVGアイコン
+   Material Symbols アイコン
 ======================================== */
+
+/*
+  アイコンの背景は全種類共通。
+  アイコン本体だけ、それぞれの色にする。
+*/
 
 .menu-icon,
 .content-icon {
@@ -312,10 +340,11 @@ a {
 
   border-radius: 50%;
 
-  /* アイコン背景は統一 */
   background: var(--cream-soft);
 }
 
+
+/* ---------- メニュー側 ---------- */
 
 .menu-icon {
   width: 54px;
@@ -323,35 +352,87 @@ a {
 }
 
 
-.menu-icon svg {
-  width: 30px;
-  height: 30px;
+/* Material Symbols 本体 */
+
+.menu-icon .material-symbols-outlined,
+.content-icon .material-symbols-outlined {
+
+  display: block;
+
+  font-family: "Material Symbols Outlined";
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  line-height: 1;
+
+  letter-spacing: normal;
+
+  text-transform: none;
+
+  white-space: nowrap;
+
+  word-wrap: normal;
+
+  direction: ltr;
+
+  -webkit-font-feature-settings: "liga";
+
+  -webkit-font-smoothing: antialiased;
+
+  font-feature-settings: "liga";
+
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 40;
 }
 
 
-/* アイコン本体だけ色を変える */
+/* ---------- アイコンサイズ ---------- */
+
+.menu-icon .material-symbols-outlined {
+  font-size: 30px;
+}
+
+
+/* ========================================
+   アイコンカラー
+======================================== */
+
+/* 魔法の庭 */
 
 .icon-garden {
-  color: #d59a5b;
+  color: var(--icon-garden);
 }
 
+
+/* 庭の住人たち */
 
 .icon-residents {
-  color: #d47791;
+  color: var(--icon-residents);
 }
 
+
+/* 小さな図書室 */
 
 .icon-library {
-  color: #9b82aa;
+  color: var(--icon-library);
 }
 
+
+/* 秘密のクローゼット */
 
 .icon-closet {
-  color: #6d9a9a;
+  color: var(--icon-closet);
 }
 
 
-/* ---------- メニュー文字 ---------- */
+/* ========================================
+   メニュー文字
+======================================== */
 
 .menu-item h3 {
   margin: 0 0 3px;
@@ -369,6 +450,8 @@ a {
   color: var(--text-soft);
 
   font-size: 0.82rem;
+
+  line-height: 1.7;
 }
 
 
@@ -385,6 +468,7 @@ a {
 
 .hero-image {
   width: 100%;
+
   height: min(72vh, 680px);
 
   min-height: 420px;
@@ -417,6 +501,7 @@ a {
   color: var(--pink-dark);
 
   font-size: 0.75rem;
+
   letter-spacing: 0.14em;
 }
 
@@ -427,6 +512,7 @@ a {
   color: var(--pink-dark);
 
   font-size: clamp(2rem, 5vw, 3.4rem);
+
   font-weight: 600;
 
   letter-spacing: 0.1em;
@@ -438,7 +524,10 @@ a {
 ======================================== */
 
 .intro {
-  width: min(var(--content-width), calc(100% - 40px));
+  width: min(
+    var(--content-width),
+    calc(100% - 40px)
+  );
 
   margin: 0 auto;
 
@@ -466,7 +555,10 @@ a {
 ======================================== */
 
 .contents {
-  width: min(var(--content-width), calc(100% - 40px));
+  width: min(
+    var(--content-width),
+    calc(100% - 40px)
+  );
 
   margin: 0 auto;
 
@@ -474,6 +566,7 @@ a {
 
   display: flex;
   flex-direction: column;
+
   gap: 18px;
 }
 
@@ -481,6 +574,7 @@ a {
 .content-card {
   display: flex;
   align-items: center;
+
   gap: 24px;
 
   padding: 26px 28px;
@@ -488,6 +582,7 @@ a {
   background: var(--white);
 
   border: 1px solid var(--border-soft);
+
   border-radius: 20px;
 
   box-shadow:
@@ -510,7 +605,9 @@ a {
 }
 
 
-/* ---------- コンテンツアイコン ---------- */
+/* ========================================
+   コンテンツアイコン
+======================================== */
 
 .content-icon {
   width: 72px;
@@ -518,13 +615,16 @@ a {
 }
 
 
-.content-icon svg {
-  width: 40px;
-  height: 40px;
+/* Material Symbols */
+
+.content-icon .material-symbols-outlined {
+  font-size: 40px;
 }
 
 
-/* ---------- コンテンツ文字 ---------- */
+/* ========================================
+   コンテンツ文字
+======================================== */
 
 .content-text {
   flex: 1;
@@ -537,6 +637,7 @@ a {
   color: var(--text-main);
 
   font-size: 1.15rem;
+
   font-weight: 600;
 
   letter-spacing: 0.06em;
@@ -549,6 +650,8 @@ a {
   color: var(--text-soft);
 
   font-size: 0.86rem;
+
+  line-height: 1.75;
 }
 
 
@@ -562,6 +665,8 @@ a {
     --header-height: 64px;
   }
 
+
+  /* ---------- ヘッダー ---------- */
 
   .site-header {
     padding: 0 16px;
@@ -579,8 +684,13 @@ a {
   }
 
 
+  /* ---------- メニュー ---------- */
+
   .menu-inner {
-    width: min(100% - 28px, 760px);
+    width: min(
+      100% - 28px,
+      760px
+    );
 
     padding-top: 40px;
     padding-bottom: 60px;
@@ -600,9 +710,8 @@ a {
   }
 
 
-  .menu-icon svg {
-    width: 27px;
-    height: 27px;
+  .menu-icon .material-symbols-outlined {
+    font-size: 27px;
   }
 
 
@@ -613,12 +722,16 @@ a {
 
   .menu-item p {
     font-size: 0.76rem;
+
     line-height: 1.6;
   }
 
 
+  /* ---------- メインビジュアル ---------- */
+
   .hero-image {
     height: 62vh;
+
     min-height: 420px;
   }
 
@@ -641,6 +754,8 @@ a {
   }
 
 
+  /* ---------- 世界観紹介 ---------- */
+
   .intro {
     width: calc(100% - 28px);
 
@@ -651,9 +766,12 @@ a {
 
   .intro p {
     font-size: 0.85rem;
+
     line-height: 2;
   }
 
+
+  /* ---------- コンテンツ ---------- */
 
   .contents {
     width: calc(100% - 28px);
@@ -668,6 +786,7 @@ a {
     gap: 16px;
 
     padding: 20px;
+
     border-radius: 17px;
   }
 
@@ -678,9 +797,8 @@ a {
   }
 
 
-  .content-icon svg {
-    width: 33px;
-    height: 33px;
+  .content-icon .material-symbols-outlined {
+    font-size: 33px;
   }
 
 
@@ -691,6 +809,7 @@ a {
 
   .content-text p {
     font-size: 0.77rem;
+
     line-height: 1.65;
   }
 
