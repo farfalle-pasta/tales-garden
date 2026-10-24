@@ -415,6 +415,14 @@ a {
   color: var(--icon-residents);
 }
 
+.icon-residents {
+  color: var(--icon-residents);
+}
+
+.icon-residents .material-symbols-rounded {
+  transform: translateY(2px);
+}
+
 
 /* 小さな図書室 */
 
