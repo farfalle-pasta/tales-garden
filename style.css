@@ -1083,9 +1083,9 @@ a {
 .intro::after {
   max-width: 100%;
 
-  font-size: 0.56rem;
+  font-size: 1.15rem;
 
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
 
   white-space: nowrap;
 }
