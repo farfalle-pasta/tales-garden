@@ -499,32 +499,62 @@ a {
   max-width: 480px;
 
   padding: 20px;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 5px rgba(70, 50, 45, 0.45),
+    0 1px 2px rgba(70, 50, 45, 0.35);
 }
 
 
 .hero-subtitle {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
 
-  color: var(--pink-dark);
+  color: #ffffff;
 
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
 
-  letter-spacing: 0.14em;
+  letter-spacing: 0.22em;
+
+  text-shadow:
+    0 2px 4px rgba(70, 50, 45, 0.5);
 }
 
 
 .hero h1 {
   margin: 0;
 
-  color: var(--pink-dark);
+  color: #ffffff;
 
   font-size: clamp(2rem, 5vw, 3.4rem);
 
   font-weight: 600;
 
   letter-spacing: 0.1em;
+
+  text-shadow:
+    0 3px 7px rgba(70, 50, 45, 0.55),
+    0 1px 3px rgba(70, 50, 45, 0.45);
 }
 
+.hero-catchcopy {
+  margin: 18px 0 0;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.08em;
+
+  text-shadow:
+    0 2px 5px rgba(70, 50, 45, 0.5),
+    0 1px 2px rgba(70, 50, 45, 0.4);
+}
 
 /* ========================================
    共通セクション見出し
@@ -993,11 +1023,13 @@ a {
 
 
   .hero-text {
-    top: 10%;
-    left: 5%;
+  top: 10%;
+  left: 5%;
 
-    padding: 12px;
-  }
+  padding: 12px;
+
+  max-width: 90%;
+}
 
 
   .hero-subtitle {
@@ -1008,6 +1040,16 @@ a {
   .hero h1 {
     font-size: 2rem;
   }
+
+.hero-catchcopy {
+  margin-top: 14px;
+
+  font-size: 0.85rem;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.06em;
+}
 
 
   /* ======================================
