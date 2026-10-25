@@ -484,8 +484,6 @@ a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  /* 追加 */
   position: relative;
 }
 
