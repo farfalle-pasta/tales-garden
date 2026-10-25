@@ -592,25 +592,6 @@ a {
   padding: 88px 28px 92px;
 
   text-align: center;
-
-  /*
-    カードではなく、
-    紹介文の周囲だけ空気が少し変わるようにする
-  */
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255, 253, 249, 0.72),
-      rgba(255, 250, 243, 0.28) 50%,
-      rgba(255, 253, 249, 0.72)
-    );
-
-  /*
-    カード感をなくす
-  */
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
 }
 
 
@@ -1062,18 +1043,6 @@ a {
     しっかりと余白を取る
   */
   padding: 72px 20px 76px;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255, 253, 249, 0.72),
-      rgba(255, 250, 243, 0.28) 50%,
-      rgba(255, 253, 249, 0.72)
-    );
-
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
 }
 
 
