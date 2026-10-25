@@ -632,9 +632,9 @@ a {
 
   color: var(--pink-main);
 
-  font-size: 1.15rem;
+  font-size: 0.9rem;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 
   line-height: 1;
 
@@ -1083,9 +1083,9 @@ a {
 .intro::after {
   max-width: 100%;
 
-  font-size: 1.15rem;
+  font-size: 0.9rem;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 
   white-space: nowrap;
 }
