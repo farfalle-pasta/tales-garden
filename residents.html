@@ -478,11 +478,69 @@
 
 
 
-  <!-- ========================================
-       JavaScript
-  ======================================== -->
+<!-- ========================================
+     メニュー用 JavaScript
+======================================== -->
 
-  <script src="script.js"></script>
+<script>
+
+  const menuButton =
+    document.querySelector(".menu-button");
+
+  const menuOverlay =
+    document.querySelector(".menu-overlay");
+
+
+  /* ---------- メニュー開閉 ---------- */
+
+  menuButton.addEventListener("click", () => {
+
+    const isOpen =
+      menuButton.classList.toggle("is-open");
+
+    menuOverlay.classList.toggle(
+      "is-open",
+      isOpen
+    );
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+  });
+
+
+  /* ---------- メニュー内リンクを押したら閉じる ---------- */
+
+  const menuLinks =
+    document.querySelectorAll(
+      ".menu-overlay a"
+    );
+
+
+  menuLinks.forEach((link) => {
+
+    link.addEventListener("click", () => {
+
+      menuButton.classList.remove(
+        "is-open"
+      );
+
+      menuOverlay.classList.remove(
+        "is-open"
+      );
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    });
+
+  });
+
+</script>
 
 </body>
 
