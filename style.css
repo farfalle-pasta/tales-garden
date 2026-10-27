@@ -1267,3 +1267,449 @@ a {
   }
 
 }
+
+/* ========================================
+   庭の住人たち
+======================================== */
+
+
+/* ========================================
+   ページ全体
+======================================== */
+
+.residents-page {
+  width: 100%;
+
+  padding: 72px 20px 100px;
+}
+
+
+/* ========================================
+   ページタイトル
+======================================== */
+
+.residents-intro {
+  width: min(
+    var(--content-width),
+    100%
+  );
+
+  margin: 0 auto;
+
+  padding: 20px 0 64px;
+
+  text-align: center;
+}
+
+
+.residents-intro .section-heading {
+  margin-bottom: 22px;
+}
+
+
+/* ページタイトルには
+   左右の装飾線を付けない */
+
+.residents-intro .section-heading h1 {
+  position: static;
+
+  display: block;
+
+  margin: 0;
+
+  color: var(--pink-dark);
+
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.residents-intro > p {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 0.88rem;
+
+  line-height: 2;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* ========================================
+   キャラクター一覧
+======================================== */
+
+.residents-list {
+
+  width: min(
+    var(--content-width),
+    100%
+  );
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* ========================================
+   キャラクターカード
+======================================== */
+
+.resident-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 14px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border-soft);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 4px 18px rgba(100, 80, 65, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.resident-card:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 9px 26px rgba(100, 80, 65, 0.08);
+}
+
+
+/* ========================================
+   キャラクターごとの色
+======================================== */
+
+/*
+  ここは各キャラクターのイメージカラーを
+  後から調整できます。
+*/
+
+.resident-lulu {
+  --resident-color: #d47791;
+}
+
+
+.resident-02 {
+  --resident-color: #d59a5b;
+}
+
+
+.resident-03 {
+  --resident-color: #9b82aa;
+}
+
+
+.resident-04 {
+  --resident-color: #6d9a9a;
+}
+
+
+/* ========================================
+   花モチーフ
+======================================== */
+
+.resident-flower {
+
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  z-index: 2;
+
+  display: flex;
+
+  gap: 2px;
+
+  color: var(--resident-color);
+
+  opacity: 0.9;
+}
+
+
+.resident-flower .material-symbols-rounded {
+
+  font-size: 20px;
+
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 20;
+}
+
+
+.resident-flower .material-symbols-rounded:first-child {
+
+  transform:
+    rotate(-18deg)
+    translateY(2px);
+}
+
+
+.resident-flower .material-symbols-rounded:last-child {
+
+  transform:
+    rotate(18deg)
+    translateY(-2px);
+}
+
+
+/* ========================================
+   キャラクター画像
+======================================== */
+
+.resident-image {
+
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: var(--cream-soft);
+
+  border: 2px solid var(--resident-color);
+}
+
+
+.resident-image img {
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* ========================================
+   キャラクター情報
+======================================== */
+
+.resident-info {
+
+  padding: 20px 8px 10px;
+
+  text-align: center;
+}
+
+
+/* 英字 */
+
+.resident-name-en {
+
+  margin: 0 0 2px;
+
+  color: var(--resident-color);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* 名前 */
+
+.resident-info h2 {
+
+  margin: 0 0 9px;
+
+  color: var(--text-main);
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* 紹介文 */
+
+.resident-description {
+
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 0.78rem;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   スマートフォン
+======================================== */
+
+@media (max-width: 600px) {
+
+
+  /* ---------- ページ ---------- */
+
+  .residents-page {
+
+    padding:
+      48px 14px 70px;
+  }
+
+
+  /* ---------- タイトル ---------- */
+
+  .residents-intro {
+
+    padding:
+      10px 0 44px;
+  }
+
+
+  .residents-intro .section-heading {
+
+    margin-bottom: 18px;
+  }
+
+
+  .residents-intro .section-heading h1 {
+
+    font-size: 1.45rem;
+
+    letter-spacing: 0.1em;
+  }
+
+
+  .residents-intro > p {
+
+    font-size: 0.78rem;
+
+    line-height: 1.9;
+  }
+
+
+  /* ---------- 一覧 ---------- */
+
+  .residents-list {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  /* ---------- カード ---------- */
+
+  .resident-card {
+
+    padding: 12px;
+
+    border-radius: 19px;
+  }
+
+
+  /* ---------- 花 ---------- */
+
+  .resident-flower {
+
+    top: 10px;
+    right: 10px;
+  }
+
+
+  .resident-flower .material-symbols-rounded {
+
+    font-size: 18px;
+
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 18;
+  }
+
+
+  /* ---------- 画像 ---------- */
+
+  .resident-image {
+
+    border-radius: 14px;
+  }
+
+
+  /* ---------- 情報 ---------- */
+
+  .resident-info {
+
+    padding:
+      17px 6px 8px;
+  }
+
+
+  .resident-name-en {
+
+    font-size: 0.6rem;
+  }
+
+
+  .resident-info h2 {
+
+    font-size: 1.05rem;
+
+    margin-bottom: 7px;
+  }
+
+
+  .resident-description {
+
+    font-size: 0.75rem;
+
+    line-height: 1.75;
+  }
+
+}
+
+
+/* ========================================
+   PCのみ
+======================================== */
+
+.mobile-only {
+  display: none;
+}
+
+
+@media (max-width: 600px) {
+
+  .mobile-only {
+    display: block;
+  }
+
+}
