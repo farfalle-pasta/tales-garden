@@ -1492,17 +1492,13 @@ a {
   position: relative;
 
   width: 72%;
-
   aspect-ratio: 1 / 1;
-
   margin: 0 auto;
 
   overflow: hidden;
 
   border-radius: 16px;
-
   background: var(--cream-soft);
-
   border: 3px solid var(--resident-color);
 }
 
