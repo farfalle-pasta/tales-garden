@@ -1510,10 +1510,10 @@ a {
   height: 100%;
 
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 10%;
 
-  transform: scale(1.7);
-  transform-origin: center 25%;
+  transform: scale(1.9);
+  transform-origin: center 10%;
 }
 
 
