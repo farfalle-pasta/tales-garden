@@ -1471,7 +1471,7 @@ a {
 
   transform:
     rotate(-18deg)
-    translateY(-3px);
+    translateX(3px);
 }
 
 .resident-flower .material-symbols-rounded:last-child {
@@ -1479,7 +1479,7 @@ a {
 
   transform:
     rotate(18deg)
-    translateY(5px);
+    translateY(7px);
 }
 
 
@@ -1510,10 +1510,10 @@ a {
   height: 100%;
 
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 25%;
 
   transform: scale(1.7);
-  transform-origin: center 20%;
+  transform-origin: center 25%;
 }
 
 
