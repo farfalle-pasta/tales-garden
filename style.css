@@ -1406,25 +1406,32 @@ a {
   後から調整できます。
 */
 
-.resident-lulu {
-  --resident-color: #d47791;
+.resident-pink {
+  --resident-color: #d99aaa;
 }
 
 
-.resident-02 {
-  --resident-color: #d59a5b;
+.resident-orange {
+  --resident-color: #e5b28f;
 }
 
 
-.resident-03 {
-  --resident-color: #9b82aa;
+.resident-yellow {
+  --resident-color: #dccb88;
 }
 
 
-.resident-04 {
-  --resident-color: #6d9a9a;
+.resident-green {
+  --resident-color: #9fc4ae;
 }
 
+.resident-blue {
+  --resident-color: #9db9c9;
+}
+
+.resident-purple {
+  --resident-color: #b4a5c5;
+}
 
 /* ========================================
    花モチーフ
